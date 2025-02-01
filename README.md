@@ -1,7 +1,5 @@
 # Projeto Cafeteria Expresso em Bytes ☕️
 
-# 🏠 Projeto Café & Cia ☕️
-
 Esse é um projeto fictício de um **site de cafeteria** que criei para fins de estudo. O objetivo principal foi criar um layout moderno e funcional utilizando as principais tecnologias de desenvolvimento web.
 
 ## 🚀 Tecnologias Usadas
