@@ -1,0 +1,641 @@
+:root {
+    font-size: 10px;
+    --main-color: #aa7b42;
+    --black: #131313;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+.caixa-video {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.caixa-video video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.titulo {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+    margin-top: 3rem;
+}
+
+.titulo span {
+    color: var(--main-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: var(--bg);
+    border-bottom: var(--border);
+    width: 100vw;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 50px; 
+    padding: 1.5rem 0;
+    position: relative;
+}
+
+.header section a img {
+    height: 6rem;
+}
+
+.header section nav a{
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: white;
+    transition: 0.4s linear;
+}
+
+.header section nav a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.caixa-principal {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.caixa-principal div {
+    max-width: 60rem;
+}
+
+.caixa-principal div h3 {
+    color: white;
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.caixa-principal div p {
+    font-size: 2rem;
+    color: white;
+    font-weight: lighter;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.botao-link {
+    background-color: var(--main-color);
+    cursor: pointer;
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    transition: 0.3s linear;
+}
+
+.botao-link {
+    background-color: var(--main-color);
+    cursor: pointer;
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* animação suave de transformação e cor */
+}
+
+/* Efeito ao passar o mouse */
+.botao-link:hover {
+    transform: scale(1.1); /* aumenta o tamanho do botão */
+    background-color: darken(var(--main-color), 10%); /* cor de fundo um pouco mais escura */
+}
+
+
+
+.caixa-principal div a:hover {
+    letter-spacing: 0.1rem;
+}
+
+/* Caso o título "O que dizem sobre nós" também precise de ajuste */
+.titulo-avaliacoes {
+    text-align: center; /* Garante que o título seja centralizado */
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+    margin-top: 3rem; /* Adiciona margem superior para o título */
+}
+
+
+.caixa-sobre .sobre-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.caixa-sobre .sobre-container .sobre-imagem {
+    flex: 1 1 45rem;
+}
+
+.caixa-sobre .sobre-container .sobre-imagem img {
+    margin: center;
+    width: 100%;
+}
+
+.caixa-sobre .sobre-container .sobre-texto {
+    flex: 11 45rem;
+    padding: 2rem;
+}
+
+.caixa-sobre .sobre-container .sobre-texto h3 {
+    font-size: 3rem;
+    color: white;
+}
+
+.caixa-sobre .sobre-container .sobre-texto p {
+    font-size: 1.5rem;
+    font-weight: light;
+    color: white;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    gap: 20px;
+    z-index: 4;
+    position: fixed;
+    top: 50%;
+    left: -30%;
+    transform: translate(-50%, -50%);
+    transition: left 1s linear;
+}
+
+.mascara-modal {
+    visibility: hidden;
+    z-index: 3;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+/* Estilo para o container principal */
+.caixa-principal {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8rem 2rem;
+}
+
+/* Restante do seu código CSS */
+
+/* Estilo para o container das avaliações */
+.avaliacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Estilo de cada avaliação */
+.avaliacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* Texto da avaliação */
+.review-texto {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.review-texto h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.review-texto p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* Foto da avaliação */
+.review-foto {
+    flex-shrink: 0;
+    width: 8rem;
+    height: 8rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Alterna o layout das avaliações, fazendo com que o texto e a imagem troquem de posição a cada avaliação */
+.avaliacao:nth-child(odd) {
+    flex-direction: row;
+}
+
+.avaliacao:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .avaliacao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .review-texto {
+        margin: 0;
+    }
+
+    .review-foto {
+        margin-top: 1.5rem;
+    }
+}
+
+
+.botao-voltar {
+    position: fixed; /* Botão fixo */
+    top: 2rem; /* Centraliza verticalmente no cabeçalho */
+    left: 2rem; /* Alinha à esquerda */
+    width: 5rem; /* Largura do círculo */
+    height: 5rem; /* Altura do círculo */
+    background-color: black; /* Cor de fundo preta */
+    color: #aa7b42; /* Cor da seta */
+    font-size: 2.5rem; /* Tamanho da seta (para torná-la mais grossa) */
+    font-weight: bold; /* Deixa a seta mais grossa */
+    display: flex; /* Usa flexbox para centralizar conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    border-radius: 50%; /* Botão redondo */
+    border: 0.3rem solid #aa7b42; /* Borda com a mesma cor da seta */
+    text-decoration: none; /* Remove sublinhado */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza animações */
+    z-index: 10; /* Garante que esteja acima de outros elementos */
+}
+
+.botao-voltar:hover {
+    transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+    box-shadow: 0 0 10px #aa7b42; /* Adiciona um brilho ao redor */
+}
+
+:root {
+    font-size: 10px;
+    --main-color: #aa7b42;
+    --black: #131313;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+.caixa-video {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.caixa-video video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: var(--bg);
+    border-bottom: var(--border);
+    width: 100vw;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 1.5rem 0;
+    position: relative;
+}
+
+.header section a img {
+    height: 6rem;
+}
+
+.header section nav a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: white;
+    transition: 0.4s linear;
+}
+
+.header section nav a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 1rem; /* Espaço entre o topo da página e o conteúdo */
+}
+
+.produto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.produto-info {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.produto h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.produto p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.produto span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-top: 1rem;
+}
+
+.produto-imagem img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.produto.invertido {
+    flex-direction: row-reverse;
+}
+
+.produto.invertido .produto-info {
+    padding-right: 2rem;
+    padding-left: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .produto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .produto.invertido {
+        flex-direction: column;
+    }
+
+    .produto-imagem img {
+        width: 100%;
+        height: auto;
+    }
+
+    .produto-info {
+        padding: 1rem 0;
+    }
+}
+
+/* Botão de Voltar (seta) */
+.botao-voltar {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: black;
+    color: #aa7b42;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0.3rem solid #aa7b42;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
+}
+
+.botao-voltar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #aa7b42;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: var(--black);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-social {
+    text-align: right;
+    min-width: 250px;
+    
+}
+
+.footer-info {
+    text-align: left;
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-social h4 {
+    text-align: right;
+    flex: 1;
+    min-width: 250px;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.footer-info h4 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.footer-info p {
+    margin: 0.5rem 0;
+}
+
+.footer-social ul {
+    list-style: none; /* Remove marcadores de lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /*Alinha os itens horizontalmente */
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.footer-social ul li a {
+    display: flex; /* Garante que o link seja clicável em toda a área do ícone */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove sublinhado nos links */
+}
+
+.footer-social ul li a svg {
+    width: 24px; /* Ajuste do tamanho do ícone */
+    height: 24px;
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.footer-social ul li a:hover svg {
+    transform: scale(1.2); /* Ampliação ao passar o mouse */
+}
+
+.footer-social li a {
+    display: inline-block;
+}
+
+.footer-social li img {
+    text-align: right;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.3s;
+}
+
+.footer-social li img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info, .footer-social {
+        text-align: center;
+    }
+
+    .footer-social ul {
+        flex-direction: column;
+    }
+
+    .footer-social li {
+        margin-bottom: 1rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
