@@ -26,3 +26,6 @@ O projeto foi desenvolvido para simular um site de uma cafeteria fictícia com o
 - **Produtos** com informações sobre os produtos
 - **Avaliações** para os clientes estarem cientes sobre a reputação da empresa
 - **Endereço** com CSS para melhorar a experiência do usuário que é acessível de qualquer página desejada
+
+
+_créditos: https://www.youtube.com/watch?v=vXS7yoE_C1M&t=1254s_
