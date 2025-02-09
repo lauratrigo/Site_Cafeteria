@@ -1,12 +1,12 @@
-# Projeto Cafeteria Expresso em Bytes ☕️
+# ☕️ Projeto Cafeteria Expresso em Bytes 
 
 Esse é um projeto fictício de um **site de cafeteria** que criei para fins de estudo. O objetivo principal foi criar um layout moderno e funcional utilizando as principais tecnologias de desenvolvimento web.
 
 ## 🚀 Tecnologias Usadas
 
-- HTML5
-- CSS3
-- JavaScript
+- **HTML**
+- **CSS**
+- **JavaScript**
 
 ![HTML Badge](https://img.shields.io/badge/HTML-5-orange)
 ![CSS Badge](https://img.shields.io/badge/CSS-3-blue)
