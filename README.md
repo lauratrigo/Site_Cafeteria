@@ -27,6 +27,10 @@ O projeto foi desenvolvido para simular um site de uma cafeteria fictícia com o
 - **Avaliações** para os clientes estarem cientes sobre a reputação da empresa
 - **Endereço** com CSS para melhorar a experiência do usuário que é acessível de qualquer página desejada
 
+## 📜 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
+
 ## 🎥 Créditos
 
 Este projeto foi desenvolvido por Laura Trigo com base no vídeo [Criando um Site novo de Cafeteria](https://www.youtube.com/watch?v=vXS7yoE_C1M&t=1254s).
